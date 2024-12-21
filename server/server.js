@@ -1,5 +1,6 @@
 const Koa = require('koa');
 const WebSocket = require('ws');
+const diceware = require('diceware');
 
 const app = new Koa();
 
@@ -18,7 +19,8 @@ wss.on('connection', ws => {
 
   ws.on('message', (message) => {
     console.log(`Received message: ${message}`);
-    ws.send(JSON.stringify(message))
+    const words = diceware();
+    ws.send(JSON.stringify(words));
   });
 
   ws.on('close', () => {
