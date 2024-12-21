@@ -1,0 +1,14 @@
+{
+  "name": "@pitonisa/server",
+  "scripts": {
+    "serve": "pm2 start server.js --watch"
+  },
+  "dependencies": {
+    "diceware": "^0.0.1",
+    "koa": "^2.15.3",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "pm2": "^5.4.3"
+  }
+}

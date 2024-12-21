@@ -1,0 +1,25 @@
+{
+  "name": "pitonisa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "cd server && npm run serve && cd ../client && serve"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taolicus/pitonisa.git"
+  },
+  "keywords": ["diceware", "oracle"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taolicus/pitonisa/issues"
+  },
+  "homepage": "https://github.com/taolicus/pitonisa#readme",
+  "description": "Diceware Oracle Experiment"
+}
