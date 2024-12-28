@@ -19,7 +19,8 @@ wss.on('connection', ws => {
 
   ws.on('message', (message) => {
     console.log(`Received message: ${message}`);
-    const words = diceware();
+    const words = capitalize(diceware(2));
+    console.log(words)
     ws.send(JSON.stringify(words));
   });
 
@@ -27,3 +28,12 @@ wss.on('connection', ws => {
     console.log('Client disconnected');
   });
 });
+
+function capitalize(str) {
+  return str
+    .split(' ')
+    .map(function(word) {
+        return word[0].toUpperCase() + word.substr(1);
+    })
+    .join(' ');
+}
