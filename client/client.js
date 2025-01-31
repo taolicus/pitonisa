@@ -1,5 +1,7 @@
 console.log('client loaded');
+const logDisplay = document.getElementById('log');
 const wordsDisplay = document.getElementById('words');
+const getWordsBtn = document.getElementById('get_words');
 
 let ws;
 let reconnectInterval = 1000; // Initial reconnection delay in ms
@@ -11,18 +13,14 @@ function connect() {
     ws.onopen = () => {
       console.log('Connected to the server');
       reconnectInterval = 1000; // Reset the reconnection interval after successful connection
-      ws.send('get_words');
+      ws.send('get_log');
     }
 
     ws.onmessage = (event) => {
-      try {
-        const words = JSON.parse(event.data);
-        console.log(words);
-        wordsDisplay.innerHTML = words;
-      }
-      catch {
-        console.log(`Received: ${event.data}`);
-      }
+      // console.log('Received:', event.data);
+      const data = JSON.parse(event.data);
+      if(data.request === 'log') logDisplay.innerHTML = data.log;
+      if(data.request === 'words') wordsDisplay.innerHTML = data.words;
     }
 
     ws.onclose = () => {
@@ -39,3 +37,5 @@ function connect() {
 }
 
 connect();
+
+getWordsBtn.addEventListener('click', () => { ws.send('get_words') });

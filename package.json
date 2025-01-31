@@ -7,7 +7,8 @@
     "client"
   ],
   "scripts": {
-    "start": "cd server && npm run serve && cd ../client && serve"
+    "start": "cd server && npm run serve && cd ../client && serve",
+    "logs": "cd server && pm2 logs"
   },
   "devDependencies": {},
   "repository": {

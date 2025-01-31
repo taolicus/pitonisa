@@ -19,11 +19,27 @@
         color: #900;
         font-family: sans-serif;
       }
+      #log {
+        text-align: left;
+      }
+    }
+    button {
+      background-color: #900;
+      color: #fff;
+      border: none;
+      padding: 1em;
+      cursor: pointer;
+      border: solid 1px #900;
+      &:hover {
+        border: solid 1px #fff;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Pitonisa</h1>
-  <h2 id="words"></h2>
+  <!-- <h1>Pitonisa</h1> -->
+  <pre id="log"></pre>
+  <pre id="words"></pre>
+  <button id="get_words">Get Words</button>
 </body>
 </html>
