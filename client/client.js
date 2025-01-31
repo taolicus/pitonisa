@@ -7,7 +7,13 @@ let ws;
 let reconnectInterval = 1000; // Initial reconnection delay in ms
 
 function connect() {
-  ws = new WebSocket(`ws://${window.location.hostname}:3000`);
+  const host = window.location.hostname;
+  const prod = host !== 'localhost';
+  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const socket = prod ? '/pitonisa_ws' : ':3000';
+  const socket_url = `${protocol}//${host}${socket}`;
+  console.log('Connecting to:', socket_url);
+  ws = new WebSocket(socket_url);
 
   if(ws) {
     ws.onopen = () => {
