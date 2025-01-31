@@ -28,9 +28,14 @@
         text-align: left;
         margin: auto;
         width: fit-content;
+        max-width: 100%;
         flex-shrink: 1;
         overflow: hidden;
         overflow-y: scroll;
+        @media screen and (orientation: portrait) {
+          max-height: 50vh;
+          overflow: auto;
+        }
       }
     }
     button {
