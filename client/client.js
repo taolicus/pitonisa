@@ -19,7 +19,7 @@ function connect() {
     ws.onopen = () => {
       console.log('Connected to the server');
       reconnectInterval = 1000; // Reset the reconnection interval after successful connection
-      ws.send('get_log');
+      // ws.send('get_log');
     }
 
     ws.onmessage = (event) => {

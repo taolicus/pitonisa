@@ -33,6 +33,13 @@ body {
     overflow: auto;
   }
 }
+#words {
+  flex-grow: 1;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 button {
   background-color: #900;
   color: #fff;
