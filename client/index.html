@@ -14,13 +14,21 @@
       }
       body {
         margin: 0;
-        padding: 10vw;
+        padding: 5vh 10vw;
         text-align: center;
         color: #900;
         font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
       #log {
         text-align: left;
+        margin: auto;
+        width: fit-content;
+        flex-shrink: 1;
+        overflow: hidden;
+        overflow-y: scroll;
       }
     }
     button {
@@ -37,9 +45,11 @@
   </style>
 </head>
 <body>
-  <!-- <h1>Pitonisa</h1> -->
+  <h1>Pitonisa</h1>
+  <h2>Diceware Divination</h2>
+  <p>Log:</p>
   <pre id="log"></pre>
   <pre id="words"></pre>
-  <button id="get_words">Get Words</button>
+  <button id="get_words">Cast</button>
 </body>
 </html>
