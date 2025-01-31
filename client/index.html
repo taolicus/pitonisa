@@ -5,51 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pitonisa</title>
   <script src="client.js" type="module" defer></script>
-  <style>
-    html {
-      background-color: #000;
-      * {
-        box-sizing: border-box;
-        font-weight: 300;
-        margin: 0;
-      }
-      body {
-        margin: 0;
-        padding: 5vh 10vw;
-        text-align: center;
-        color: #900;
-        font-family: sans-serif;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      #log {
-        text-align: left;
-        margin: auto;
-        width: fit-content;
-        max-width: 100%;
-        flex-shrink: 1;
-        overflow: hidden;
-        overflow-y: scroll;
-        @media screen and (orientation: portrait) {
-          max-height: 50vh;
-          overflow: auto;
-        }
-      }
-    }
-    button {
-      background-color: #900;
-      color: #fff;
-      border: none;
-      padding: 1em;
-      cursor: pointer;
-      border: solid 1px #900;
-      &:hover {
-        border: solid 1px #fff;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <h1>Pitonisa: Diceware Divination</h1>
@@ -57,5 +13,6 @@
   <pre id="log"></pre>
   <pre id="words"></pre>
   <button id="get_words">Cast</button>
+  <p><a href="about.html">What is this?</a></p>
 </body>
 </html>

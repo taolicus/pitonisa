@@ -1,0 +1,67 @@
+html {
+  background-color: #000;
+}
+* {
+  box-sizing: border-box;
+  font-weight: 300;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 5vh 10vw;
+  text-align: center;
+  color: #900;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  p {
+    color: #fff;
+  }
+}
+#log {
+  text-align: left;
+  margin: auto;
+  width: fit-content;
+  max-width: 100%;
+  flex-shrink: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+  @media screen and (orientation: portrait) {
+    max-height: 50vh;
+    overflow: auto;
+  }
+}
+button {
+  background-color: #900;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  border: solid 1px #900;
+  &:hover {
+    border: solid 1px #fff;
+  }
+}
+a {
+  color: #900;
+}
+p {
+  line-height: 1.4rem;
+}
+p + p {
+  margin-top: 1rem;
+}
+section {
+  p {
+    text-align: left;
+  }
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
