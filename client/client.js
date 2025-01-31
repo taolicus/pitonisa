@@ -7,7 +7,7 @@ let ws;
 let reconnectInterval = 1000; // Initial reconnection delay in ms
 
 function connect() {
-  ws = new WebSocket('ws://localhost:3000');
+  ws = new WebSocket(`ws://${window.location.hostname}:3000`);
 
   if(ws) {
     ws.onopen = () => {
